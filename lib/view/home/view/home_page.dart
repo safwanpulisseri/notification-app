@@ -2,85 +2,54 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:notification_app/core/theme/color/app_colors.dart';
 import '../../../core/const/height_width.dart';
-import '../../../core/util/png_asset.dart';
+import '../widget/appbar_bottom_widget.dart';
+import '../widget/appbar_text_widget.dart';
+import '../widget/category_list_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
+  
 
   @override
+  
   Widget build(BuildContext context) {
+      final screenSize = MediaQuery.of(context).size;
     return Scaffold(
     appBar: AppBar(
-       title: Row(
-         children: [
-          Image.asset(AppPngPath.locationIcon,height: 20,width: 20,),
-          kWidth10,
-           Text(
-                'ABCD, New Delhi',
-                style: GoogleFonts.lato(
-                  textStyle: const TextStyle(color: Colors.black, fontSize:16 ,fontWeight: FontWeight.w700),
+       title: const AppBarTextWidget(),
+         bottom: const PreferredSize(
+        preferredSize: Size.fromHeight(50),
+        child: AppbarBottomWidget(),
+          ),
+        ),
+         body: Column(
+          children: [
+             Row(
+               children: [
+                kWidth20,
+                 Text('What would you like to do today?',
+                    style: GoogleFonts.quicksand(
+                   textStyle: const TextStyle(color: AppColor.secondary, fontSize:22 ,fontWeight: FontWeight.w700),
+                 ),
+                 ),
+               ],
+             ),
+              CatogaryList(screenSize: screenSize,),
+              Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text('More',
+               style: GoogleFonts.quicksand(
+                 textStyle: const TextStyle(color: AppColor.primary, fontSize:16 ,fontWeight: FontWeight.bold),
+               ),
                 ),
-              ),
-              kWidth10,
-               Image.asset(AppPngPath.backButton,height: 20,width: 20,),
-            ],
-         ),
-         bottom: PreferredSize(
-  preferredSize: Size.fromHeight(50),
-  child: Padding(
-    padding: const EdgeInsets.all(8.0),
-    child: Row(
-      children: [
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 15),
-            child: TextFormField(
+                Icon(Icons.keyboard_arrow_down,color: AppColor.primary,size: screenSize.width/12,)
+              ],
+            ),
+           const Spacer()
             
-              decoration: InputDecoration(
-                filled: true,
-                
-                fillColor: AppColor.toneThree,
-                hintText: 'Search for products/stores',
-                hintStyle: GoogleFonts.quicksand(
-                textStyle:const  TextStyle(color: AppColor.toneTwo, fontSize: 16,fontWeight: FontWeight.w500),
-              ),
-                 border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(8), 
-                    borderSide: BorderSide.none, 
-                    
-                  ),
-                  suffixIcon: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Image.asset(
-          AppPngPath.serachTextformfield, 
-          height: 20,
-          width: 20,
-        ),
-      ),
-                
-              ),
-              
-            ),
-          ),
+          ],
           
-        ),
-       kWidth15,
-        Image.asset(AppPngPath.notification, height: 25, width: 25),
-        kWidth15,
-        Image.asset(AppPngPath.tagBar, height: 25, width: 25),
-        kWidth5,
-      ],
-    ),
-  ),
-),
-        ),
-     body: Center(
-          child: Text(
-            'Hello, Google Fonts!',
-            style: GoogleFonts.quicksand(
-              textStyle: TextStyle(color: Colors.black, fontSize: 24,fontWeight: FontWeight.bold),
-            ),
-          ),
      )
     );
   }

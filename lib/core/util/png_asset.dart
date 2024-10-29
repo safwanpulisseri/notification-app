@@ -14,6 +14,14 @@ final class AppPngPath {
   static const notification = "assets/png/notification.png";
   static const serachTextformfield = "assets/png/serach_textformfield.png";
   static const tagBar = "assets/png/tag_bar.png";
+  static const chickenCatOne = "assets/png/chicken_cat_one.png";
+  static const foodCatOne = "assets/png/food_cat_one.png";
+  static const giftCatOne = "assets/png/gift_cat_one.png";
+  static const makeupCatOne = "assets/png/makeup_cat_one.png";
+  static const medicineCatOne = "assets/png/medicine_cat_one.png";
+  static const pencilCatOne = "assets/png/pencil_cat_one.png";
+  static const petsCatOne = "assets/png/pets_cat_one.png";
+  static const storeCatOne = "assets/png/store_cat_one.png";
 
 
 }
