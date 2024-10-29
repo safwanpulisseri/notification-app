@@ -8,7 +8,7 @@ class CartPage extends StatelessWidget {
     
     return Scaffold(
       appBar: AppBar(),
-      body: Container(child: Center(child: Text('Cart'),),),
+      body: const Center(child: Text('Cart'),),
     );
   }
 }

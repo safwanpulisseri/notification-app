@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import '../../core/theme/color/app_colors.dart';
 import '../../core/util/png_asset.dart';
 import '../../view_model/navigation_controller.dart';
-import '../home/home_page.dart';
+import '../home/view/home_page.dart';
 
 class HomeNavigation extends StatelessWidget {
   const HomeNavigation({super.key});
@@ -42,7 +42,7 @@ class HomeNavigation extends StatelessWidget {
               icon: Image.asset(
                 controller.selectedIndex == 0
                     ? AppPngPath.homeFilledIcon
-                    : AppPngPath.homeFilledIcon,
+                    : AppPngPath.homeIcon,
                 width: 25,
                 height: 25,
               ),
@@ -51,7 +51,7 @@ class HomeNavigation extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Image.asset(
                controller.selectedIndex == 1
-                    ? AppPngPath.cartIcon
+                    ? AppPngPath.cartFilledIcon
                     : AppPngPath.cartIcon,
                 width: 25,
                 height: 25,
@@ -61,7 +61,7 @@ class HomeNavigation extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Image.asset(
                controller.selectedIndex == 2
-                    ? AppPngPath.orderIcon
+                    ? AppPngPath.orderFilledIcon
                     : AppPngPath.orderIcon,
                 width: 25,
                 height: 25,
@@ -71,7 +71,7 @@ class HomeNavigation extends StatelessWidget {
             BottomNavigationBarItem(
               icon: Image.asset(
                 controller.selectedIndex == 3
-                    ? AppPngPath.accountIcon
+                    ? AppPngPath.accountFilledIcon
                     : AppPngPath.accountIcon,
                 width: 25,
                 height: 25,
