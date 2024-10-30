@@ -24,6 +24,8 @@ final class AppPngPath {
   static const storeCatOne = "assets/png/store_cat_one.png";
   static const carouselImageOne = "assets/png/carousel_image_one.png";
   static const carouselImageTwo = "assets/png/carousel_image_two.png";
+  static const trendingImages = "assets/png/trending_images.png";
+  static const starIcon ="assets/png/star_icon.png";
 
 
 }

@@ -29,7 +29,7 @@ class CarouselSliderWidget extends StatelessWidget {
             return Builder(
               builder: (BuildContext context) {
                 return Padding(
-                  padding: const EdgeInsets.only(right: 22.0), // Adds right-side spacing only
+                  padding: const EdgeInsets.only(right: 22.0,top: 10), // Adds right-side spacing only
                   child: Card(
                     elevation: 5,
                     shape: RoundedRectangleBorder(
