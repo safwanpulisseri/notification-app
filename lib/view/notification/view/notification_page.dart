@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:notification_app/core/util/png_asset.dart';
 import '../../../core/theme/color/app_colors.dart';
+import '../widget/notification_widget.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final screenSize = MediaQuery.of(context).size;
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(60.0),
@@ -49,12 +51,12 @@ class NotificationPage extends StatelessWidget {
                 ),
               ],
             ),
-            backgroundColor: Colors.transparent, // Make AppBar background transparent
-            elevation: 0, // Remove default elevation
+            backgroundColor: Colors.transparent, 
+            elevation: 0, 
           ),
         ),
       ),
-      body: Container(),
+      body: NotificationPageBody(screenSize: screenSize,),
     );
   }
 }

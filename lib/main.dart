@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notification_app/view/navigation_bar/home_navigation.dart';
-import 'package:notification_app/view_model/navigation_controller.dart';
+import 'package:notification_app/model/controller/navigation_controller.dart';
 import 'package:provider/provider.dart';
 import 'core/theme/app_theme.dart';
 
