@@ -1,10 +1,14 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import '../../../core/util/png_asset.dart';
+import 'package:notification_app/core/theme/color/app_colors.dart';
+
 
 class CarouselSliderWidget extends StatelessWidget {
+  final List<String> imagePaths; 
+
   const CarouselSliderWidget({
     super.key,
+    required this.imagePaths, 
   });
 
   @override
@@ -16,31 +20,25 @@ class CarouselSliderWidget extends StatelessWidget {
             height: 200,
             autoPlay: true,
             viewportFraction: 0.9,
-            // This aligns each item to the left so that only the right portion shows
-          //  enlargeStrategy: CenterPageEnlargeStrategy.height,
             enableInfiniteScroll: true,
           ),
-          items: [
-            AppPngPath.carouselImageOne,
-            AppPngPath.carouselImageTwo,
-            AppPngPath.carouselImageOne,
-            AppPngPath.carouselImageTwo,
-          ].map((i) {
+          items: imagePaths.map((imagePath) {
             return Builder(
               builder: (BuildContext context) {
                 return Padding(
-                  padding: const EdgeInsets.only(right: 22.0,top: 10), // Adds right-side spacing only
-                  child: Card(
-                    elevation: 5,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                  padding: const EdgeInsets.only(right: 22.0, top: 10), // Adds right-side spacing only
+                  child: Container(
+                    color: AppColor.background,
+                  //  elevation: 5,
+                    // shape: RoundedRectangleBorder(
+                    //   borderRadius: BorderRadius.circular(10),
+                    // ),
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: Image.asset(
-                        i,
+                        imagePath,
                         fit: BoxFit.cover,
-                        width: double.infinity,
+                       // width: double.infinity,
                       ),
                     ),
                   ),

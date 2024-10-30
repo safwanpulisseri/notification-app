@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:notification_app/core/theme/color/app_colors.dart';
 import '../../../core/const/height_width.dart';
+import '../../../core/util/png_asset.dart';
 import '../widget/appbar_bottom_widget.dart';
 import '../widget/appbar_text_widget.dart';
 import '../widget/carousel_widget.dart';
@@ -59,7 +60,14 @@ class HomePage extends StatelessWidget {
                    ),
                  ],
                ),
-             const CarouselSliderWidget(),
+             const CarouselSliderWidget(
+            imagePaths: [
+            AppPngPath.carouselImageOne,
+            AppPngPath.carouselImageTwo,
+            AppPngPath.carouselImageOne,
+            AppPngPath.carouselImageTwo,
+          ],
+              ),
                Padding(
                  padding: const EdgeInsets.all(22.0),
                  child: Row(
@@ -103,8 +111,23 @@ class HomePage extends StatelessWidget {
                 ),
              ],
             ),
-          )
-            
+          ),
+          kHeight20,
+             Row(
+                 children: [
+                  kWidth25,
+                   Text('Craze deals',
+                      style: GoogleFonts.quicksand(
+                     textStyle: const TextStyle(color: AppColor.secondary, fontSize:22 ,fontWeight: FontWeight.w700),
+                   ),
+                   ),
+                 ],
+               ),
+               const CarouselSliderWidget(
+            imagePaths: [
+            AppPngPath.crazeDeals,
+             ],
+           ),
           ],
         ),
       ),
