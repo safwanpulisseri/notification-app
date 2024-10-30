@@ -86,10 +86,10 @@ class HomePage extends StatelessWidget {
                    ],
                  ),
                ),
-               SingleChildScrollView(
-        scrollDirection: Axis.horizontal,
-        child: Column(
-          children: [
+           SingleChildScrollView(
+             scrollDirection: Axis.horizontal,
+           child: Column(
+           children: [
             Row(
               children: [
                 kWidth25,
@@ -128,6 +128,26 @@ class HomePage extends StatelessWidget {
             AppPngPath.crazeDeals,
              ],
            ),
+           kHeight20,
+           Image.asset(AppPngPath.referEarn),
+             Padding(
+                 padding: const EdgeInsets.all(22.0),
+                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
+                     Text('Nearby stores',
+                        style: GoogleFonts.quicksand(
+                       textStyle: const TextStyle(color: AppColor.secondary, fontSize:22 ,fontWeight: FontWeight.w700),
+                      ),
+                     ),
+                      Text('See all',
+                        style: GoogleFonts.quicksand(
+                       textStyle: const TextStyle(color: AppColor.primary, fontSize:16 ,fontWeight: FontWeight.w700),
+                      ),
+                     ),
+                   ],
+                 ),
+               ),
           ],
         ),
       ),
