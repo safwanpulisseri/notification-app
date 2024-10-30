@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../../core/const/height_width.dart';
 import '../../../core/theme/color/app_colors.dart';
 import '../../../core/util/png_asset.dart';
+import '../../notification/view/notification_page.dart';
 
 class AppbarBottomWidget extends StatelessWidget {
   const AppbarBottomWidget({
@@ -47,7 +48,11 @@ class AppbarBottomWidget extends StatelessWidget {
             ),
           ),
          kWidth15,
-          Image.asset(AppPngPath.notification, height: 25, width: 25),
+          GestureDetector(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>const NotificationPage(),),);
+            },
+            child: Image.asset(AppPngPath.notification, height: 25, width: 25)),
           kWidth15,
           Image.asset(AppPngPath.tagBar, height: 25, width: 25),
           kWidth5,
