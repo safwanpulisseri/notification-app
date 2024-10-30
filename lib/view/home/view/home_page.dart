@@ -4,6 +4,7 @@ import 'package:notification_app/core/theme/color/app_colors.dart';
 import '../../../core/const/height_width.dart';
 import '../widget/appbar_bottom_widget.dart';
 import '../widget/appbar_text_widget.dart';
+import '../widget/carousel_widget.dart';
 import '../widget/category_list_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -34,7 +35,7 @@ class HomePage extends StatelessWidget {
                  ),
                ],
              ),
-              CatogaryList(screenSize: screenSize,),
+              CategoryList(screenSize: screenSize,),
               Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -46,11 +47,19 @@ class HomePage extends StatelessWidget {
                 Icon(Icons.keyboard_arrow_down,color: AppColor.primary,size: screenSize.width/12,)
               ],
             ),
-           const Spacer()
-            
+              Row(
+               children: [
+                kWidth20,
+                 Text('Top picks for you',
+                    style: GoogleFonts.quicksand(
+                   textStyle: const TextStyle(color: AppColor.secondary, fontSize:22 ,fontWeight: FontWeight.w700),
+                 ),
+                 ),
+               ],
+             ),
+           CarouselSliderWidget(),
           ],
-          
-     )
+       )
     );
   }
 }

@@ -22,6 +22,8 @@ final class AppPngPath {
   static const pencilCatOne = "assets/png/pencil_cat_one.png";
   static const petsCatOne = "assets/png/pets_cat_one.png";
   static const storeCatOne = "assets/png/store_cat_one.png";
+  static const carouselImageOne = "assets/png/carousel_image_one.png";
+  static const carouselImageTwo = "assets/png/carousel_image_two.png";
 
 
 }

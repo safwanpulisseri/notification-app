@@ -46,14 +46,14 @@ class CategoryCard extends StatelessWidget {
                               top: screenSize.width / 210,
                               bottom: screenSize.width / 210),
                           child:  Text(
-            discount,
-             style: GoogleFonts.quicksand(
+                            discount,
+                       style: GoogleFonts.quicksand(
                textStyle: const TextStyle(color: AppColor.background, fontSize:8 ,fontWeight: FontWeight.w600),
-             ),
-           ),
-                        
-                        ),
-                      )),
+                         ),
+                      ),
+                    ),
+                   )
+                ),
               ],
             ),
           ),
