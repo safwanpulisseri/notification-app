@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:notification_app/core/util/png_asset.dart';
@@ -76,9 +75,9 @@ class TrendingItemCard extends StatelessWidget {
                               fontSize: 12,
                               fontWeight: FontWeight.w500),
                         ),
-                      ),
-                    ],
-                  ),
+                    ),
+                 ],
+              ),
           ],
         )
       ],

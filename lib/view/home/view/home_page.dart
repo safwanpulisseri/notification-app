@@ -7,6 +7,7 @@ import '../widget/appbar_bottom_widget.dart';
 import '../widget/appbar_text_widget.dart';
 import '../widget/carousel_widget.dart';
 import '../widget/category_list_widget.dart';
+import '../widget/freshly_bakers.dart';
 import '../widget/trending_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -148,6 +149,20 @@ class HomePage extends StatelessWidget {
                    ],
                  ),
                ),
+               FreshlyBakers(screenSize: screenSize,),
+               kHeight25,
+                FreshlyBakers(screenSize: screenSize,),
+                 kHeight35,
+                ElevatedButton(
+                  onPressed: (){}, child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 50),
+                    child: Text('View all stores',  style: GoogleFonts.quicksand(
+                         textStyle: const TextStyle(color: AppColor.background, fontSize:16 ,fontWeight: FontWeight.w500),
+                        ),
+                                    ),
+                  )
+             ),
+              kHeight35,
           ],
         ),
       ),

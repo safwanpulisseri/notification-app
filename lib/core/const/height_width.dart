@@ -23,6 +23,7 @@ const kWidth35 = SizedBox(width:  35);
 const kWidth40 = SizedBox(width:  40);
 const kWidth45 = SizedBox(width:  45);
 const kWidth50 = SizedBox(width:  50);
+const kWidth100 = SizedBox(width:  100);
 
 
 const zeroMeasuredWidget = SizedBox(height: 0,width: 0);

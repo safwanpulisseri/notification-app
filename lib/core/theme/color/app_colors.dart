@@ -11,7 +11,8 @@ final class AppColor {
   static const Color toneThree = Color(0xFFEEEEEE);
   static const Color toneFour = Color(0xFF9C37EC);
   static const Color toneFive = Color(0xFF323232);
-
+  static const Color toneSix = Color.fromARGB(65, 65, 137, 151);
+  static const Color toneSeven = Color(0xFFEA7E00);
 
 
  

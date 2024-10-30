@@ -28,6 +28,9 @@ final class AppPngPath {
   static const starIcon ="assets/png/star_icon.png";
   static const crazeDeals ="assets/png/craze_deals.png"; 
   static const referEarn =  "assets/png/refer_earn.png";
+  static const freshlyImages ="assets/png/freshly_images.png";
+  static const grocerySmlIcon ="assets/png/grocery_sml_icon.png"; 
+  static const offerSmlIcon =  "assets/png/offer_sml_icon.png";
 
 
 }
