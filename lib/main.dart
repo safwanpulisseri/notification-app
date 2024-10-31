@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notification_app/view/navigation_bar/home_navigation.dart';
 import 'package:notification_app/model/controller/navigation_controller.dart';
+import 'package:notification_app/view/splash/view/intro_page.dart';
 import 'package:provider/provider.dart';
 import 'core/theme/app_theme.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Notification App',
       theme: AppTheme.theme,
-      home:const  HomeNavigation(),
+      home:const  IntroPage(),
     );
   }
 }

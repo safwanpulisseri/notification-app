@@ -32,6 +32,7 @@ final class AppPngPath {
   static const grocerySmlIcon ="assets/png/grocery_sml_icon.png"; 
   static const offerSmlIcon =  "assets/png/offer_sml_icon.png";
   static const backIcon = "assets/png/back_icon.png";
+  static const appLogo = "assets/png/app_logo.png";
   
 
 }
