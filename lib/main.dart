@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:notification_app/view/navigation_bar/home_navigation.dart';
 import 'package:notification_app/model/controller/navigation_controller.dart';
 import 'package:notification_app/view/splash/view/intro_page.dart';
 import 'package:provider/provider.dart';
